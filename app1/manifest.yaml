@@ -41,13 +41,13 @@ metadata:
   name: ingress-wildcard-host
 spec:
   rules:
-  - host: "app1.chandrakasa.online"
+  - host: "app1.chandrakasa.online" # ALB Rule
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: app1
+            name: app1 # ALB Target group
             port:
               number: 80
